@@ -1,5 +1,5 @@
 // CartItem.js
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity, clearCart } from './CartSlice';
 import './CartItem.css';
@@ -24,8 +24,8 @@ const CartItem = ({ onContinueShopping }) => {
   // 🛍 “Continue Shopping” — parent komponentə siqnal göndərərək showCart=false edəcək
   const handleContinueShopping = (e) => {
     e.preventDefault();
-    if (onContinueShopping) {
-      onContinueShopping(); // parent komponentdə showCart=false olacaq
+    if (onContinueShopping ) {
+       onContinueShopping()// parent komponentdə showCart=false olacaq
     }
   };
 
